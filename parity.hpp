@@ -6,12 +6,10 @@
 #include <type_traits>
 
 
-// To use `enable_if` with a struct, we have to fudge a partial specialization of the template.
-template <unsigned DataWidth, unsigned ParityWidth = 1, unsigned DataShift = 1, typename EnableType = void> struct Parity;
-
-// Partial specialization of Parity that enforces ParityWidth being a factor of DataWidth
 template <unsigned DataWidth, unsigned ParityWidth, unsigned DataShift>
-struct Parity<DataWidth, ParityWidth, DataShift, typename std::enable_if<(DataWidth % ParityWidth == 0)>::type> {
+struct Parity {
+  static_assert(DataWidth % ParityWidth == 0, "ParityWidth must be a factor of DataWidth");
+
   // static const ParityGroupSize calculation as DataType
   template <typename DataType> struct ParityGroupSize { static const DataType value = DataWidth / ParityWidth; };
   // static const ParityMask calculation as DataType
