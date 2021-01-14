@@ -1,5 +1,6 @@
 ---
 title: Parity
 ---
-# parity
-Templated C++ header for calculating bit parity.
+# Parity
+
+A templated C++ header for calculating bit parity.

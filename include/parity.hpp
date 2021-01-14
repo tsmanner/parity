@@ -6,7 +6,7 @@
 #include <type_traits>
 
 
-template <unsigned DataWidth, unsigned ParityWidth, unsigned DataShift>
+template <unsigned DataWidth, unsigned ParityWidth=1, unsigned DataShift=1>
 struct Parity {
   static_assert(DataWidth % ParityWidth == 0, "ParityWidth must be a factor of DataWidth");
 
