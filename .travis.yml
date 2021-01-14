@@ -15,5 +15,5 @@ script:
   - cmake
   - make -j8
   - cd ../tests
-  - g++ -isystem../rapidcheck/include -I../include -L../rapidcheck -I../include Main.cpp -lrapicheck
+  - g++ --std=c++11 -Wall -isystem../rapidcheck/include -I../include -L../rapidcheck -I../include Main.cpp -lrapicheck
   - ./a.out
