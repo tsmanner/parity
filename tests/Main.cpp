@@ -1,5 +1,5 @@
 // Compile Command
-// g++ -isystem../rapidcheck/include -I../include -L../rapidcheck -I../include Main.cpp -lrapicheck
+// g++ -isystem../rapidcheck/include -I../include -L../rapidcheck -I../include Main.cpp -lrapidcheck
 
 #include <bitset>
 #include <rapidcheck.h>
