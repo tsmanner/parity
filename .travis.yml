@@ -12,7 +12,7 @@ git:
   submodules_depth: 1
 script:
   - cd rapidcheck
-  - cmake
+  - cmake .
   - make -j8
   - cd ../tests
   - g++ --std=c++11 -Wall -isystem../rapidcheck/include -I../include -L../rapidcheck -I../include Main.cpp -lrapicheck
