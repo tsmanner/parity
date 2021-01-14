@@ -11,6 +11,9 @@ git:
   submodules: true
   submodules_depth: 1
 script:
-  - cd tests
+  - cd rapidcheck
+  - cmake
+  - make -j8
+  - cd ../tests
   - g++ -isystem../rapidcheck/include -I../include -L../rapidcheck -I../include Main.cpp -lrapicheck
   - ./a.out
