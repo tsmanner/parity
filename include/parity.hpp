@@ -25,7 +25,10 @@ struct Parity {
   // parity on each parity group, ORing in other parity bits shifted left 1 at a time.
   template <typename DataType>
   static inline typename std::enable_if<(ParityWidth > 1), DataType>::type
-  even(const DataType& data) { return (Parity<DataWidth-ParityGroupSize<DataType>::value, ParityWidth-1>::even(data >> ParityGroupSize<DataType>::value) << 1) | Parity<ParityGroupSize<DataType>::value>::even(data); }
+  even(const DataType& data) {
+    return (Parity<DataWidth-ParityGroupSize<DataType>::value, ParityWidth-1>::even(data >> ParityGroupSize<DataType>::value) << 1)
+          | Parity<ParityGroupSize<DataType>::value>::even(data);
+  }
 
   // Masking calc implementation
   //   Input data needs to be masked if the precision of the data type exceeds the
