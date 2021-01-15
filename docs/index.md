@@ -5,7 +5,8 @@ nav_order: 1
 
 # Parity
 
-Parity is a modern C++ template library for efficiently calculating bit parity.
+An efficient and expressive parity calculation library.
+
 It uses cascading XORs to calculate the parity for each parity group, with a
 complexity of `ParityGroups * log2(ParityGroupSize)`.  The `Parity` struct
 template is specialized by the total number of bits to calculate parity over,
