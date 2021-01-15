@@ -104,5 +104,5 @@ This library uses recursive templates, inline and constexpr functions to
 generate parity functions with the loop unrolled, and constant data masks to
 apply to input data before processing.  Any parity calculation with data
 width known at compile time can be described in this way.  There are some other
-benefits to using the `Parity` strut, which can be found on the
+benefits to using the `Parity` struct, which can be found on the
 [Why This Library?](why.md) page.
