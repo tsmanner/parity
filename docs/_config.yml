@@ -6,13 +6,13 @@ aux_links:
 
 collections:
   unstable:
-    permalink: "/:collection/:name/"
+    permalink: "/:collection/docs/:name/"
     output: true
   v1.0.1:
-    permalink: "/:collection/:name/"
+    permalink: "/:collection/docs/:name/"
     output: true
   v1.0.0:
-    permalink: "/:collection/:name/"
+    permalink: "/:collection/docs/:name/"
     output: true
 
 just_the_docs:
